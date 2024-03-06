@@ -9,45 +9,20 @@
             background-image: url("espacio.png");
             background-size: 100%;
         }
-        #botonIniciar {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: blue;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        #online-alarm-kur-iframe {
-            display: none; /* Inicialmente oculto */
-            margin: 0 auto;
-            border: 0;
-            overflow: hidden;
+        div {
+            color: blue;
+            margin-left: 5%;
+            margin-top: 10%;
+            height: 80%;
         }
     </style>
 </head>
 <body>
-    <button id="botonIniciar" onclick="ocultarBoton()">Iniciar</button>
-    <div id="iframeContainer">
-        <iframe id="online-alarm-kur-iframe" scrolling="no" src="https://embed-countdown.onlinealarmkur.com/en/#2024-03-16T00:00:00@Europe%2FMadrid" width="360" height="80"></iframe>
+    <div>
+    <iframe id="online-alarm-kur-iframe" scrolling="no" style="display: block; margin: 0 auto; border: 0; overflow: hidden;" src="https://embed-countdown.onlinealarmkur.com/en/#2024-03-16T00:00:00@Europe%2FMadrid" width="360" height="80" style="display: block; margin: 0px auto; border: 0px;"></iframe>
     </div>
     <audio autoplay loop>
         <source src="rldnt.mp3" type="audio/mpeg">
     </audio>
-
-    <script>
-        function ocultarBoton() {
-            var boton = document.getElementById("botonIniciar");
-            var iframe = document.getElementById("online-alarm-kur-iframe");
-            boton.style.opacity = "0"; // Aplicar transición de opacidad
-            setTimeout(function() {
-                boton.style.display = "none"; // Ocultar el botón
-                iframe.style.display = "block"; // Mostrar el iframe
-            }, 1000); // Tiempo de espera antes de ocultar el botón (en milisegundos)
-        }
-    </script>
 </body>
 </html>
