@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿EL FIN?</title>
-    <style>
-        body {
-            background-image: url("espacio.png");
-            background-size: 100%;
-        }
-        div {
-            color: blue;
-            margin-left: 5%;
-            margin-top: 10%;
-            height: 80%;
-        }
-    </style>
+    <title>¿?</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styleindex.css">
 </head>
+
 <body>
-    <div>
-    <iframe id="online-alarm-kur-iframe" scrolling="no" style="display: block; margin: 0 auto; border: 0; overflow: hidden;" src="https://embed-countdown.onlinealarmkur.com/en/#2024-03-16T00:00:00@Europe%2FMadrid" width="360" height="80" style="display: block; margin: 0px auto; border: 0px;"></iframe>
+    <div class="login-container">
+        <h3 class="login-title">Introduce la contraseña</h3>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="text" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </div>
+        </form>
+        <div id="message" class="mt-3"></div>
     </div>
-    <audio autoplay loop>
-        <source src="rldnt.mp3" type="audio/mpeg">
-    </audio>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript para Validación -->
+    <script src="js/formulario.js"></script>
 </body>
+
 </html>

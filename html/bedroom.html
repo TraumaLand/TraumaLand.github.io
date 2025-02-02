@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿?</title>
+    <link rel="stylesheet" href="../styles/style_bedroom.css">
+    <script src="../js/carta.js"></script>
+</head>
+<body>
+    <!-- Audio de fondo -->
+    <audio autoplay>
+        <source src="../multimedia/mp3/puerta.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+    <audio id="audio" autoplay loop>
+        <source src="../multimedia/mp3/baile_inolvidable.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <script>
+        var audioElement = document.getElementById('audio');
+        audioElement.volume = 0.1;  // Establece el volumen al 50%
+    </script>
+    <!-- Zona clicable -->
+    <div class="click-zone1" onclick="openCard()"></div>
+
+    <a href="../html/starry_night.html" class="click-zone2">
+        <div class="click-zone2" onclick="openCard()"></div>
+    </a>
+
+    <!-- Carta que se abrirá -->
+    <div class="card" id="card">
+        <div class="paper" id="paper">
+            <p id="cardText"></p>
+        </div>
+    </div>
+
+</body>
+</html>

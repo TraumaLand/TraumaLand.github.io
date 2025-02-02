@@ -1,0 +1,73 @@
+body {
+    background-image: url("../img/habitacion.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: currentColor;
+}
+
+/* Zona clicable */
+.click-zone1 {
+    position: absolute;
+    top: 45%;
+    /* Ajusta la posición de la zona clicable */
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 360px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.click-zone2 {
+    position: absolute;
+    top: 45%;
+    left: 94%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 900px;
+    cursor: pointer;
+}
+
+/* Estilo de la carta cerrada */
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 300px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transform-origin: top;
+    transition: transform 1s ease-out;
+    display: none;
+    /* Inicialmente está oculta */
+    z-index: 10;
+}
+
+/* Estilo de la carta abierta */
+.card.open {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+/* Estilo del papel dentro de la carta */
+.paper {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* Animación para hacer visible el texto del papel */
+.card.open .paper {
+    opacity: 1;
+}
