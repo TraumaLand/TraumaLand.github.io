@@ -7,3 +7,14 @@
     object-fit: cover; 
     z-index: -1; 
 }
+
+.click-zone1 {
+    position: absolute;
+    top: 100%;
+    /* Ajusta la posición de la zona clicable */
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 360px;
+    height: 150px;
+    cursor: pointer;
+}
